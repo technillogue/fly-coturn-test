@@ -1,0 +1,44 @@
+app = 'r8-coturn'
+primary_region = 'sjc'
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
+
+[[services]]
+  min_machines_running = 1
+  internal_port = 3478
+  protocol = "udp"
+
+  [[services.ports]]
+    port = "3478"
+
+[[services]]
+  internal_port = 3479
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = "3479"
+
+[[services]]
+  internal_port = 5349
+  protocol = "udp"
+
+  [[services.ports]]
+    port = "5349"
+
+[[services]]
+  internal_port = 5349
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = "5349"
+
+[[services]]
+  internal_port = 49152
+  protocol = "udp"
+  
+[[services.ports]]
+  start_port = 49152
+  end_port = 65535
